@@ -4,10 +4,11 @@
   <parent>
     <groupId>org.codehaus.preon</groupId>
     <artifactId>preon</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
   </parent>
   <artifactId>preon-io</artifactId>
   <name>Preon IO</name>
+  <version>1.1</version>
   <description>
     Core abstractions for reading and writing bits.
   </description>

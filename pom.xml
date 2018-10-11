@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.codehaus.preon</groupId>
   <artifactId>preon</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
   <packaging>pom</packaging>
   <name>Preon</name>
   <url>http://preon.codehaus.org/</url>
@@ -161,20 +161,18 @@
     </plugins>
   </build>
   <distributionManagement>
+    <!--Version 为xxxx-Releases时，使用mvn package deploy会发布到该地址 -->
     <repository>
-      <id>codehaus.org</id>
-      <name>XFire Central Repository</name>
-      <url>dav:https://dav.codehaus.org/repository/preon/</url>
+      <id>releases</id>
+      <name>Nexus Release Repository</name>
+      <url>http://172.30.21.20:8081/repository/maven-releases/</url>
     </repository>
+    <!--Version 为xxxx-SNAPSHOT时，使用mvn package deploy会发布到该地址 -->
     <snapshotRepository>
-      <id>codehaus.org</id>
-      <name>XFire Central Development Repository</name>
-      <url>dav:https://dav.codehaus.org/snapshots.repository/preon/</url>
+      <id>snapshots</id>
+      <name>Nexus Snapshot Repository</name>
+      <url>http://172.30.21.20:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
-    <site>
-      <id>codehaus.org</id>
-      <url>dav:https://dav.codehaus.org/preon/</url>
-    </site>
   </distributionManagement>
   <reporting>
     <plugins>
